@@ -39,14 +39,4 @@ Cypress.Commands.add('login', (username, password) =>{
     cy.get('#txt-password').type(password)
     cy.get('#btn-login').click()
     cy.url().should('include','#appointment')
-
-
-    // TERE UI
-    // cy.url().should('include','/login')
-
-    // cy.get('#username').type(username)
-    // cy.get('#password').type(password)
-    // cy.get('button').should('contain','Login').click()
-    // cy.url().should('include','#appointment')
-     
 })
