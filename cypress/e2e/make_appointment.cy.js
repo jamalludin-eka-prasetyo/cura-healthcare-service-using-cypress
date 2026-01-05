@@ -51,11 +51,6 @@ describe('Home Page', () => {
         cy.get('.radio-inline [type="radio"]').check('Medicaid')
         cy.get('.radio-inline [type="radio"]').should('be.checked')
 
-        // cy.get('#txt_visit_date').type('02/01/1997')
-        // cy.get('#txt_visit_date').should('have.value', '02/01/1997')
-        // cy.get('strong').click()
-        // cy.get('body').click({ force: true })
-
         cy.get('#txt_comment').type('Hello i have appoinment for doctor strange in 02/01/1997')
         cy.get('#txt_comment').should('have.value', 'Hello i have appoinment for doctor strange in 02/01/1997')
 
