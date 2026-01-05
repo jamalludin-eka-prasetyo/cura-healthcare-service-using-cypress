@@ -24,6 +24,9 @@ Thumbs.db
 .idea/
 *.swp
 
-# Build output (jika ada)
+# Build output (kalau ada proses build)
 dist/
 build/
+
+# Coverage reports (kalau pakai nyc/coverage tools)
+coverage/
