@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "cypress": "^15.8.1"
+  },
+  "dependencies": {
+    "papaparse": "^5.5.3"
+  }
+}
