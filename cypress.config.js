@@ -13,5 +13,12 @@ module.exports = defineConfig({
       const users = Papa.parse(csvFile, { header: true, skipEmptyLines: true }).data; 
       config.env.users = users; return config;
     },
+    reporter: "mochawesome",
+    reporterOptions: { 
+      reportDir: "cypress/reports", 
+      overwrite: false, 
+      html: true, 
+      json: true
+    }
   },
 })
