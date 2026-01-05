@@ -24,6 +24,8 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
+import Papa from 'papaparse'
+
 
 Cypress.Commands.add('login', (username, password) =>{
     cy.visit('/')
@@ -40,3 +42,19 @@ Cypress.Commands.add('login', (username, password) =>{
     cy.get('#btn-login').click()
     cy.url().should('include','#appointment')
 })
+
+
+
+Cypress.Commands.add('readCSV', (filePath) => {
+  return cy.readFile(filePath).then((csvString) => {
+    return new Promise((resolve) => {
+      Papa.parse(csvString, {
+        header: true,
+        skipEmptyLines: true,
+        complete: (results) => {
+          resolve(results.data); // hasilnya array of objects
+        }
+      });
+    });
+  });
+});
