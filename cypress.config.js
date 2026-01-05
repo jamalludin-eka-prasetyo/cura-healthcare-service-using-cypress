@@ -1,4 +1,6 @@
 const { defineConfig } = require('cypress')
+fs = require('fs');
+Papa = require('papaparse');
 
 module.exports = defineConfig({
   e2e: {
@@ -7,6 +9,16 @@ module.exports = defineConfig({
     viewportHeight: 1080,
 
     setupNodeEvents(on, config) {
+      const csvFile = fs.readFileSync('cypress/fixtures/Login_data.csv', 'utf8'); 
+      const users = Papa.parse(csvFile, { header: true, skipEmptyLines: true }).data; 
+      config.env.users = users; return config;
     },
+    reporter: "mochawesome",
+    reporterOptions: { 
+      reportDir: "cypress/reports", 
+      overwrite: false, 
+      html: true, 
+      json: true
+    }
   },
 })
