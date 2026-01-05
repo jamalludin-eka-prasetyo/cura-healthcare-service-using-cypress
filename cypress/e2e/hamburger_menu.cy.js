@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 const users = Cypress.env('users');
->>>>>>> coba-cypress
 describe('Hamburger Menu', () => {
     beforeEach(() => {
         cy.visit('/')
@@ -15,20 +12,6 @@ describe('Hamburger Menu', () => {
         cy.url('include','/')
     })
 
-<<<<<<< HEAD
-    it('Login from Hamburger Menu', () => {
-        cy.get('#menu-toggle').click()
-        cy.get('.sidebar-nav > li:nth-child(4) > a').should('contain','Login').click()
-        cy.url('include','/profile.php#login')
-        
-        cy.get('h2').should('contain','Login')
-
-        cy.get('#txt-username').type('John Doe')
-        cy.get('#txt-password').type('ThisIsNotAPassword')
-        cy.get('#btn-login').click()
-        cy.url().should('include','#appointment')
-    })
-=======
     
     users.forEach((user) => {
     it(`Login test for user :  ${user.username}`, () => {
@@ -48,5 +31,4 @@ describe('Hamburger Menu', () => {
         })
     });
   });
->>>>>>> coba-cypress
 })
