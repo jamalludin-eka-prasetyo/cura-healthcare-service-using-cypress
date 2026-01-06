@@ -9,9 +9,17 @@ module.exports = defineConfig({
     viewportHeight: 1080,
 
     setupNodeEvents(on, config) {
+      // config get data csv for login
       const csvFile = fs.readFileSync('cypress/fixtures/Login_data.csv', 'utf8'); 
       const users = Papa.parse(csvFile, { header: true, skipEmptyLines: true }).data; 
-      config.env.users = users; return config;
+      config.env.users = users;
+
+      // configt get data csv for make appointment
+      const appointmentFile = fs.readFileSync('cypress/fixtures/Appointment_data.csv', 'utf8'); 
+      const appointments = Papa.parse(appointmentFile, { header: true, skipEmptyLines: true }).data; 
+      config.env.appointments = appointments; 
+      
+      return config;
     },
     reporter: "mochawesome",
     reporterOptions: { 
