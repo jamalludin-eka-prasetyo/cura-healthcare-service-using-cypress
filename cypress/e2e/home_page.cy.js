@@ -1,7 +1,10 @@
+import loginPage from "../support/pages/loginPage"
+
 describe('Home Page', () => {
     beforeEach(() => {
       cy.visit('/')
-    }) 
+      
+    })
 
     it('Makesure H1 "CURA Healthcare Service" in home page', () => {
           // cy.visit('/')
@@ -68,22 +71,31 @@ describe('Home Page', () => {
 // login dynamic for 1 user 1 test case
 const users = Cypress.env('users');
 
+  // users.forEach((user) => {
+  //   it(`Login test for user : ${user.username}`, () => {
+  //       cy.visit('/profile.php#login')
+  //       cy.get('#txt-username').type(user.username)
+  //       cy.get('#txt-password').type(user.password)
+  //       cy.get('#btn-login').click()
+  //       cy.get('body').then(($body) => {
+  //         if($body.text().includes('Login failed!')) {
+  //             cy.get('.text-danger').should('contain', 'Login failed! Please ensure the username and password are valid.')
+  //             cy.url().should('include','/profile.php#login') 
+  //             cy.log('login gagal menggunakan username', user.username , 'dan password', user.password) 
+  //         } else {
+  //             cy.url().should('include','#appointment')
+  //             cy.log('login berhasil menggunakan username: ', user.username , 'dan password: ', user.password) 
+  //         }
+  //       })
+  //   });
+  // });
+
+// Login menggunakan data dinamis dan POP ( page object pattern, check di cypress/support/pages/loginPage.js)
   users.forEach((user) => {
     it(`Login test for user : ${user.username}`, () => {
-        cy.visit('/profile.php#login')
-        cy.get('#txt-username').type(user.username)
-        cy.get('#txt-password').type(user.password)
-        cy.get('#btn-login').click()
-        cy.get('body').then(($body) => {
-          if($body.text().includes('Login failed!')) {
-              cy.get('.text-danger').should('contain', 'Login failed! Please ensure the username and password are valid.')
-              cy.url().should('include','/profile.php#login') 
-              cy.log('login gagal menggunakan username', user.username , 'dan password', user.password) 
-          } else {
-              cy.url().should('include','#appointment')
-              cy.log('login berhasil menggunakan username: ', user.username , 'dan password: ', user.password) 
-          }
-        })
+      cy.log('login menggunakan username', user.username , 'dan password', user.password) 
+      loginPage.login(user.username, user.password)
+      loginPage.assertLoginResult();
     });
   });
 

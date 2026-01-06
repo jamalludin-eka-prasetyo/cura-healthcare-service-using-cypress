@@ -1,0 +1,19 @@
+facility,readmission,healthcare_program,visit_date,comment
+Tokyo CURA Healthcare Center,check,Medicare,06/01/2026,this is comment for testing using cypress with healthcare program is Medicare and facility is Tokyo CURA Healthcare Center
+Tokyo CURA Healthcare Center,check,Medicaid,06/01/2026,this is comment for testing using cypress with healthcare program is Medicaid and facility is Tokyo CURA Healthcare Center
+Tokyo CURA Healthcare Center,check,None,06/01/2026,this is comment for testing using cypress with healthcare program is None and facility is Tokyo CURA Healthcare Center
+Tokyo CURA Healthcare Center,uncheck,Medicare,06/01/2026,this is comment for testing using cypress with healthcare program is Medicare and facility is Tokyo CURA Healthcare Center
+Tokyo CURA Healthcare Center,uncheck,Medicaid,06/01/2026,this is comment for testing using cypress with healthcare program is Medicaid and facility is Tokyo CURA Healthcare Center
+Tokyo CURA Healthcare Center,uncheck,None,06/01/2026,this is comment for testing using cypress with healthcare program is None and facility is Tokyo CURA Healthcare Center
+Hongkong CURA Healthcare Center,check,Medicare,06/01/2026,this is comment for testing using cypress with healthcare program is Medicare and facility is Hongkong CURA Healthcare Center
+Hongkong CURA Healthcare Center,check,Medicaid,06/01/2026,this is comment for testing using cypress with healthcare program is Medicaid and facility is Hongkong CURA Healthcare Center
+Hongkong CURA Healthcare Center,check,None,06/01/2026,this is comment for testing using cypress with healthcare program is None and facility is Hongkong CURA Healthcare Center
+Hongkong CURA Healthcare Center,uncheck,Medicare,06/01/2026,this is comment for testing using cypress with healthcare program is Medicare and facility is Hongkong CURA Healthcare Center
+Hongkong CURA Healthcare Center,uncheck,Medicaid,06/01/2026,this is comment for testing using cypress with healthcare program is Medicaid and facility is Hongkong CURA Healthcare Center
+Hongkong CURA Healthcare Center,uncheck,None,06/01/2026,this is comment for testing using cypress with healthcare program is None and facility is Hongkong CURA Healthcare Center
+Seoul CURA Healthcare Center,check,Medicare,06/01/2026,this is comment for testing using cypress with healthcare program is Medicare and facility is Seoul CURA Healthcare Center
+Seoul CURA Healthcare Center,check,Medicaid,06/01/2026,this is comment for testing using cypress with healthcare program is Medicaid and facility is Seoul CURA Healthcare Center
+Seoul CURA Healthcare Center,check,None,06/01/2026,this is comment for testing using cypress with healthcare program is None and facility is Seoul CURA Healthcare Center
+Seoul CURA Healthcare Center,uncheck,Medicare,06/01/2026,this is comment for testing using cypress with healthcare program is Medicare and facility is Seoul CURA Healthcare Center
+Seoul CURA Healthcare Center,uncheck,Medicaid,06/01/2026,this is comment for testing using cypress with healthcare program is Medicaid and facility is Seoul CURA Healthcare Center
+Seoul CURA Healthcare Center,uncheck,None,06/01/2026,this is comment for testing using cypress with healthcare program is None and facility is Seoul CURA Healthcare Center
