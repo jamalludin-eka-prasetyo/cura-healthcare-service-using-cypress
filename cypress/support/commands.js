@@ -26,7 +26,7 @@
 
 import Papa from 'papaparse'
 
-
+// Ini sebagai custom keywords
 Cypress.Commands.add('login', (username, password) =>{
     cy.visit('/')
     cy.get('#btn-make-appointment').should('be.visible').and('contain.text','Make Appointment').click()
@@ -45,16 +45,16 @@ Cypress.Commands.add('login', (username, password) =>{
 
 
 
-Cypress.Commands.add('readCSV', (filePath) => {
-  return cy.readFile(filePath).then((csvString) => {
-    return new Promise((resolve) => {
-      Papa.parse(csvString, {
-        header: true,
-        skipEmptyLines: true,
-        complete: (results) => {
-          resolve(results.data); // hasilnya array of objects
-        }
-      });
-    });
-  });
-});
+// Cypress.Commands.add('readCSV', (filePath) => {
+//   return cy.readFile(filePath).then((csvString) => {
+//     return new Promise((resolve) => {
+//       Papa.parse(csvString, {
+//         header: true,
+//         skipEmptyLines: true,
+//         complete: (results) => {
+//           resolve(results.data); // hasilnya array of objects
+//         }
+//       });
+//     });
+//   });
+// });
